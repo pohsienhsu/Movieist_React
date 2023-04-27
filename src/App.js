@@ -1,6 +1,8 @@
 import './App.css';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
+import Layout from './components/Layout';
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
 
@@ -23,7 +25,9 @@ function App() {
 
   return (
     <div className='App'>
-
+      <Routes>
+        <Route path="/" element={Layout} />
+      </Routes>
     </div>
   );
 }
