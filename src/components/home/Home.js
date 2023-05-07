@@ -1,11 +1,15 @@
+import React from 'react'
 import Hero from '../hero/Hero';
 
-const Home = ({movies}) => {
+const Home = (props) => {
+
+  const {movies} = props;
+
   return (
-    <Hero movies = {movies} />
+    <div>
+      <Hero movies={movies} />
+    </div>
   )
 }
 
-export default Home
-
-
+export default Home;
