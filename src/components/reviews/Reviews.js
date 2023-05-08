@@ -23,8 +23,8 @@ const Reviews = (props) => {
     const rev = revText.current;
 
     try {
-      const response = await api.post("/api/v1/reviews", { reviewBody: rev.value, imdbId: movieId });
-
+      const response = await axios.post("http://localhost:8080/api/v1/reviews", { reviewBody: rev.value, imdbId: movieId });
+      console.log(response);
       const updatedReviews = [...reviews, { body: rev.value }];
 
       rev.value = "";
